@@ -76,13 +76,9 @@ with custom markers coded below
 */
 var mymap = L.map('mapid').setView([52.800, -8.200], 7);
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-maxZoom: 18,
-attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-  '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-  'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-id: 'mapbox.streets'
-}).addTo(mymap);
+L.tileLayer'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
   L.marker([53.731173, -6.261339]).addTo(mymap)
   .bindPopup("<b>Louth</b><br>Mouth of the Boyne Estuary.");
@@ -123,3 +119,12 @@ id: 'mapbox.streets'
   L.marker([52.758213, -9.492192]).addTo(mymap)
   .bindPopup("<b>West Clare</b><br>Beaches and rock fishing from Loop Head to Black Head. <a href='http://irish-trophy-fish.com/irish-record-fish/marine-species/bass-dicentrarchus-labrax/'>Irish record bass</a> caught at Doughmore Strand.").openPopup();
 ;
+
+/*original mapbox layer stopped working, fixed to generic OSM layer 2021-03-02
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+maxZoom: 18,
+attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+  '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+  'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+id: 'mapbox.streets'
+}).addTo(mymap);*/
