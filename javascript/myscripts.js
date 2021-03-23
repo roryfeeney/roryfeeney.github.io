@@ -76,7 +76,7 @@ with custom markers coded below
 */
 var mymap = L.map('mapid').setView([52.800, -8.200], 7);
 
-L.tileLayer'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(mymap);
